@@ -3,12 +3,14 @@ module WebApp.Routes
 open System
 open Giraffe
 open Microsoft.AspNetCore.Http
+open FSharp.Control.Tasks.V2
 
 (*
 Fundamentals
 *)
 
 (* Models *)
+[<CLIMutable>]
 type Reservation = {
     Seats : int
     ForName : string
@@ -80,6 +82,13 @@ let readApiVersion (next:HttpFunc) (ctx:HttpContext) =
             return! json dummyReservation next ctx
     }
 
+let bindRequest (next:HttpFunc) (ctx:HttpContext) =
+    task {
+        let! model = ctx.BindJsonAsync<Reservation>()
+
+        return! Successful.CREATED model next ctx
+    }
+
 
 let webApp : HttpHandler =
     choose [
@@ -87,6 +96,7 @@ let webApp : HttpHandler =
         handleOnlyGet >=> addText "RESPONSE ONE" >=> addText "RESPONSE TWO"
         GET >=> route "/test" >=> text "Routing works!"
         GET >=> route "/reservation" >=> readApiVersion
+        POST >=> route "/reservation" >=> bindRequest
         GET >=> route "/reservations" >=> getReservations
         GET >=> route "/" >=> text "Hello F#"
     ]

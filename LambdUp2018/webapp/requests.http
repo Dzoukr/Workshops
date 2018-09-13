@@ -12,3 +12,12 @@ GET {{api}}/reservation
 ### Get reservation V2
 GET {{api}}/reservation
 X-ApiVersion: 1.1
+
+### Create reservation 
+POST {{api}}/reservation
+
+{
+    "Seats" : 4,
+    "ForName" : "Provaznik",
+    "Date" : "2018-09-13"
+}
