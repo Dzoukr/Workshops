@@ -724,7 +724,7 @@ Modules can contain both
 
 ****************************************************************************
 
-## Let's go build some web application
+## Let's go build some **web** application
 
 ****************************************************************************
 
