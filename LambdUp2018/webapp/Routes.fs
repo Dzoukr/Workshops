@@ -27,14 +27,14 @@ type ReservationV2 = {
 let dummyReservation = 
     {
         Seats = 4
-        ForName = "Provaznik"
+        ForName = "Roman"
         Date = DateTime.UtcNow
     }
 
 let dummyReservationV2 = 
     {
         Seats = 4
-        ForName = "Provaznik"
+        ForName = "Roman"
         Date = DateTime.UtcNow
         Hours = 2
     }
