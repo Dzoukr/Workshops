@@ -1,0 +1,11 @@
+@api = http://localhost:5000
+
+### Get reservations 
+GET {{api}}/reservations
+
+### Get reservation V1
+GET {{api}}/reservation
+
+### Get reservation V2
+GET {{api}}/reservation
+X-ApiVersion: 1.1
