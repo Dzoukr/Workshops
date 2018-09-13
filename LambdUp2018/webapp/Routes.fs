@@ -51,6 +51,9 @@ let getReservations (next : HttpFunc) (ctx : HttpContext) =
         return! json reservations next ctx
     }
 
+let setApiVersionHeader (next : HttpFunc) (ctx : HttpContext) =
+    setHttpHeader "X-ApiVersion" "1.0" next ctx
+
 
 let webApp : HttpHandler =
     choose [
