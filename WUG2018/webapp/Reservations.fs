@@ -66,7 +66,7 @@ let bindRequest (next:HttpFunc) (ctx:HttpContext) =
     }
 
 
-let webApp : HttpHandler =
+let server : HttpHandler =
     choose [
         setApiVersionHeader
         route "/reservation" >=> choose [

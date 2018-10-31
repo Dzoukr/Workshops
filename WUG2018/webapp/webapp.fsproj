@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Routes.fs" />
+    <Compile Include="Example01.fs" />
+    <Compile Include="Example02.fs" />
+    <Compile Include="Example03.fs" />
+    <Compile Include="Example04.fs" />
+    <Compile Include="Example05.fs" />
+    <Compile Include="Reservations.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
