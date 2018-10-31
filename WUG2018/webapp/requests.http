@@ -1,0 +1,23 @@
+### you need to instal Rest client extension
+### https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+@api = http://localhost:5000
+
+### Get reservations 
+GET {{api}}/test
+
+### Get reservation V1
+GET {{api}}/reservation
+
+### Get reservation V2
+GET {{api}}/reservation
+X-ApiVersion: 1.1
+
+### Create reservation 
+POST {{api}}/reservation
+
+{
+    "Seats" : 4,
+    "ForName" : "Provaznik",
+    "Date" : "2018-09-13"
+}
