@@ -8,7 +8,7 @@ open Microsoft.AspNetCore.Hosting
 
 let configureApp (app : IApplicationBuilder) =
     // Add Giraffe to the ASP.NET Core pipeline
-    app.UseGiraffe Example01.server
+    app.UseGiraffe Example05.server
 
 let configureServices (services : IServiceCollection) =
     // Add Giraffe dependencies

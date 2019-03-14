@@ -4,7 +4,7 @@
 @api = http://localhost:5000
 
 ### Get reservations 
-GET {{api}}/test
+POST {{api}}/hello/Olomoooooc
 
 ### Get reservation V1
 GET {{api}}/reservation

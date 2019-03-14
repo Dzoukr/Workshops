@@ -30,5 +30,5 @@ let server : HttpHandler =
     choose [
         stopHandler >=> Successful.OK "Hammer time"
         customTextHandler "HELLO FROM MY HANDLER"
-        //notCallingNextHandler >=> Successful.OK "NOT CALLED THIS"
+        notCallingNextHandler >=> Successful.OK "NOT CALLED THIS"
     ]
